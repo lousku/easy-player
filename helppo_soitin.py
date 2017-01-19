@@ -57,9 +57,6 @@ def main():
 	
 	soitettava_nro = 0
 	
-	Kappale1 = "kappale.mp3"
-	kappale2 = "rammstein.mp3"
-	
 	soittolista = ["kappale.mp3","rammstein.mp3","piipaa.mp3", "rolli.mp3"]
 	kappaleiden_maara = len(soittolista)
 	print("biiseja" )
@@ -80,17 +77,17 @@ def main():
 		
 	
 		#painikkeesta musiikki soimaan
-		'''
+		
 		if(GPIO.input(7) == True and musiikki_soi ==False and 
 		nappi_pohjassa == False):
 			pygame.mixer.music.load(open("kappale.mp3","rb"))
 			pygame.mixer.music.play()	
-		'''	
+		#soiton pysäytys	
 		if(GPIO.input(11) == True and nappi2_pohjassa == False):
 			if musiikki_soi == True:
 				pygame.mixer.music.stop()
 			
-		
+		#seuraava kappale
 		if((GPIO.input(7) == True and nappi1_pohjassa == False)	):
 			
 			if(soitettava_nro == kappaleiden_maara):
