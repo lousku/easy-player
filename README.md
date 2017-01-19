@@ -5,3 +5,5 @@ This simple python script allows raspberry pi user to create simple two-button m
 TODO:
 Make button pressing event based,
 new implementation to replace hardcoded songlist.
+
+Comments and outputs are written in Finnish. 
